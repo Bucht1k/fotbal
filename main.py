@@ -2,8 +2,8 @@ import random
 from time import sleep
 
 kdo_vyhral = []
-pocet_vyher_tym_1 = 0
-pocet_vyher_tym_2 = 0
+# pocet_vyher_tym_1 = 0
+# pocet_vyher_tym_2 = 0
 tym_1 = 0
 tym_2 = 0
 silnejsi_tym = 0
@@ -174,8 +174,6 @@ if vitez == "tym_2":
 
 sleep(5)
 
-print(f"\nVyhrál {vitez} poměrem {vysledek}\n\n")
-
 # for i in range(10000):
 # 	random.shuffle(kdo_vyhral)
 # 	vitez = random.choice(kdo_vyhral)
@@ -184,6 +182,4 @@ print(f"\nVyhrál {vitez} poměrem {vysledek}\n\n")
 # 	elif vitez == "tym_2":
 # 		pocet_vyher_tym_2 += 1
 
-# print("pocet vyher tymu 1: " + str(pocet_vyher_tym_1))
-
-# print("pocet vyher tymu 2: " + str(pocet_vyher_tym_2))
+print(f"\nVyhrál {vitez} poměrem {vysledek}\n\n")
