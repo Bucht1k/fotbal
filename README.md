@@ -1,2 +1,2 @@
 # Fotbal
-Simulation of a football match, whose input are fifa cards and their positions.
+A program that simulates a football match. Its input are fifa ratings of players and their positions.
