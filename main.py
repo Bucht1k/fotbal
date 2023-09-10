@@ -1,23 +1,39 @@
 import random
-kdo_vyhral=[]
+
+kdo_vyhral = []
 pocet_vyher_tym_1 = 0
 pocet_vyher_tym_2 = 0
-tym_1= 0
+tym_1 = 0
 tym_2 = 0
-print("zadejte rating hracu prvniho tymu:")
-for i in range(5):
-	hrac_tym_1 = int(input("zadejte hrace tymu 1 cislo" + str(i) + ": "))
-	tym_1 = tym_1 + hrac_tym_1
-print("zadejte rating hracu druheho tymu:")
-for i in range(5):
-	hrac_tym_2 = int(input("zadejte hrace tymu 2 cislo" + str(i) + ": "))
-	tym_2 = tym_2 + hrac_tym_2
-#tym_1 = int(input("zadejte rating prvniho tymu: "))
-#tym_2 = int(input("zadejte rating duheho tymu: "))
-rozdil_ratingu= abs(tym_1 - tym_2)
+vysledky = []
+
+
+
+print("PRVNÍ TÝM:")
+for i in range(1, 12):
+	hrac_tym_1 = int(input("Zadejte hráče týmu 1 číslo " + str(i) + ":"))
+	pozice = input(f"Je tento hráč na své pozici?")
+	if pozice == "ano" or pozice == "Ano" or pozice == "Je" or pozice == "je" or pozice == "a" or pozice == "A":
+		tym_1 = tym_1 + hrac_tym_1
+	else:
+		tym_1 = tym_1 + (hrac_tym_1 * 0.8)
+		
+print("DRUHÝ TÝM:")
+
+for i in range(1, 12):
+	hrac_tym_2 = int(input("Zadejte hráče týmu 2 číslo" + str(i) + ":"))
+	pozice = input(f"Je tento hráč na své pozici?")
+	if pozice == "ano" or pozice == "Ano" or pozice == "Je" or pozice == "je" or pozice == "a" or pozice == "A":
+		tym_2 = tym_2 + hrac_tym_2
+	else:
+		tym_2 = tym_2 + (hrac_tym_2 * 0.8)
+
+
+rozdil_ratingu = abs(tym_1 - tym_2)
 print(rozdil_ratingu)
+
 if tym_1>tym_2:
-	print("tym 1 je silnejsi")
+	print("Tým 1 je silnější")
 	if rozdil_ratingu <=10:
 		for i in range(50):
 			kdo_vyhral.append("tym_1")
@@ -64,7 +80,7 @@ if tym_1>tym_2:
 		for i in range(10):
 			kdo_vyhral.append("tym_2")
 elif tym_2 > tym_1:
-	print("tym 2 je silnejsi")
+	print("Tým dva je silnější")
 	if rozdil_ratingu <=10:
 		for i in range(50):
 			kdo_vyhral.append("tym_2")
@@ -111,12 +127,14 @@ elif tym_2 > tym_1:
 		for i in range(10):
 			kdo_vyhral.append("tym_1")
 else:
-	print("oba tymy jsou stejne silne")
+	print("Oba týmy jsou stejně silné")
 	for i in range(50):
 			kdo_vyhral.append("tym_1")
 	for i in range(50):
 			kdo_vyhral.append("tym_2")
-print(kdo_vyhral)
+
+# print(kdo_vyhral)
+
 for i in range(10000):
 	random.shuffle(kdo_vyhral)
 	vitez = random.choice(kdo_vyhral)
@@ -124,7 +142,7 @@ for i in range(10000):
 		pocet_vyher_tym_1 += 1
 	elif vitez == "tym_2":
 		pocet_vyher_tym_2 += 1
+
 print("pocet vyher tymu 1: " + str(pocet_vyher_tym_1))
-#print(pocet_vyher_tym_1)
+
 print("pocet vyher tymu 2: " + str(pocet_vyher_tym_2))
-#print(pocet_vyher_tym_2)
