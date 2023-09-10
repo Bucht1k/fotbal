@@ -18,7 +18,7 @@ print("\n\n\nPRVNÍ TÝM:")
 for i in range(1, 12):
 	hrac_tym_1 = int(input("\nZadejte hráče číslo " + str(i) + ":"))
 	pozice = input(f"Je tento hráč na své pozici?")
-	if pozice == "ano" or pozice == "Ano" or pozice == "Je" or pozice == "je" or pozice == "a" or pozice == "A":
+	if pozice == "ano" or pozice == "Ano" or pozice == "Je" or pozice == "je" or pozice == "a" or pozice == "A" or pozice == 1:
 		tym_1 = tym_1 + hrac_tym_1
 	else:
 		tym_1 = tym_1 + (hrac_tym_1 * 0.8)
