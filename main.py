@@ -14,7 +14,7 @@ vysledky_3 = ["3:0", "3:0", "4:0", "4:0", "3:0", "3:1", "2:0", "5:0", "5:1", "5:
 
 
 
-print("\nPRVNÍ TÝM:")
+print("\n\n\nPRVNÍ TÝM:")
 for i in range(1, 12):
 	hrac_tym_1 = int(input("\nZadejte hráče číslo " + str(i) + ":"))
 	pozice = input(f"Je tento hráč na své pozici?")
@@ -23,7 +23,7 @@ for i in range(1, 12):
 	else:
 		tym_1 = tym_1 + (hrac_tym_1 * 0.8)
 		
-print("\nDRUHÝ TÝM:")
+print("\n\nDRUHÝ TÝM:")
 
 for i in range(1, 12):
 	hrac_tym_2 = int(input("\nZadejte hráče číslo " + str(i) + ":"))
@@ -36,50 +36,51 @@ for i in range(1, 12):
 
 rozdil_ratingu = abs(tym_1 - tym_2)
 
-if tym_1>tym_2:
+if tym_1 > tym_2:
 	silnejsi_tym = 1
 	print(f"\nTým 1 je silnější a rozdíl ratingů je {rozdil_ratingu}")
-	if rozdil_ratingu <=10:
+	
+	if rozdil_ratingu <= 22:
 		for i in range(50):
 			kdo_vyhral.append("tym_1")
 		for i in range(50):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu <=20 and rozdil_ratingu >10:
+	elif rozdil_ratingu <= 33:
 		for i in range(55):
 			kdo_vyhral.append("tym_1")
 		for i in range(45):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu <=30 and rozdil_ratingu >20:
+	elif rozdil_ratingu <= 44:
 		for i in range(60):
 			kdo_vyhral.append("tym_1")
 		for i in range(40):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu <=40 and rozdil_ratingu >30:
+	elif rozdil_ratingu <= 66:
 		for i in range(65):
 			kdo_vyhral.append("tym_1")
 		for i in range(35):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu <=50 and rozdil_ratingu > 40:
+	elif rozdil_ratingu <= 88:
 		for i in range(70):
 			kdo_vyhral.append("tym_1")
 		for i in range(30):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu <=60 and rozdil_ratingu > 50:
+	elif rozdil_ratingu <= 121:
 		for i in range(75):
 			kdo_vyhral.append("tym_1")
 		for i in range(25):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu <=70 and rozdil_ratingu > 60:
+	elif rozdil_ratingu <= 176:
 		for i in range(80):
 			kdo_vyhral.append("tym_1")
 		for i in range(20):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu <=80 and rozdil_ratingu > 70:
+	elif rozdil_ratingu <= 240:
 		for i in range(85):
 			kdo_vyhral.append("tym_1")
 		for i in range(15):
 			kdo_vyhral.append("tym_2")
-	if rozdil_ratingu > 80:
+	elif rozdil_ratingu > 240:
 		for i in range(90):
 			kdo_vyhral.append("tym_1")
 		for i in range(10):
@@ -87,47 +88,47 @@ if tym_1>tym_2:
 elif tym_2 > tym_1:
 	silnejsi_tym = 2
 	print(f"\nTým dva je silnější a rozdíl ratingů je {rozdil_ratingu}")
-	if rozdil_ratingu <=10:
+	if rozdil_ratingu <= 22:
 		for i in range(50):
 			kdo_vyhral.append("tym_2")
 		for i in range(50):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu <=20 and rozdil_ratingu >10:
+	elif rozdil_ratingu <= 33:
 		for i in range(55):
 			kdo_vyhral.append("tym_2")
 		for i in range(45):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu <=30 and rozdil_ratingu >20:
+	elif rozdil_ratingu <= 44:
 		for i in range(60):
 			kdo_vyhral.append("tym_2")
 		for i in range(40):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu <=40 and rozdil_ratingu >30:
+	elif rozdil_ratingu <= 66:
 		for i in range(65):
 			kdo_vyhral.append("tym_2")
 		for i in range(35):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu <=50 and rozdil_ratingu > 40:
+	elif rozdil_ratingu <= 88:
 		for i in range(70):
 			kdo_vyhral.append("tym_2")
 		for i in range(30):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu <=60 and rozdil_ratingu > 50:
+	elif rozdil_ratingu <= 121:
 		for i in range(75):
 			kdo_vyhral.append("tym_2")
 		for i in range(25):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu <=70 and rozdil_ratingu > 60:
+	elif rozdil_ratingu <= 176:
 		for i in range(80):
 			kdo_vyhral.append("tym_2")
 		for i in range(20):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu <=80 and rozdil_ratingu > 70:
+	elif rozdil_ratingu <= 240:
 		for i in range(85):
 			kdo_vyhral.append("tym_2")
 		for i in range(15):
 			kdo_vyhral.append("tym_1")
-	if rozdil_ratingu > 80:
+	elif rozdil_ratingu > 240:
 		for i in range(90):
 			kdo_vyhral.append("tym_2")
 		for i in range(10):
@@ -173,7 +174,7 @@ if vitez == "tym_2":
 
 sleep(5)
 
-print(f"\nVyhrál {vitez} poměrem {vysledek}")
+print(f"\nVyhrál {vitez} poměrem {vysledek}\n\n")
 
 # for i in range(10000):
 # 	random.shuffle(kdo_vyhral)
