@@ -11,7 +11,7 @@ vysledek = ""
 vysledky_1 = ["1:0", "1:0", "1:0", "2:0", "2:0", "2:1", "2:1", "2:1", "3:1", "3:2", "3:2", "4:3", "5:4", "5:3", "6:4", "6:5"]
 vysledky_2 = ["1:0", "3:1", "3:1", "3:1", "4:1", "2:0", "2:0", "2:0", "3:0", "4:1", "4:2", "4:2", "5:2", "5:4", "5:3", "6:3", "7:4", ]
 vysledky_3 = ["3:0", "3:0", "6:3", "3:0", "7:4", "4:0", "4:0", "4:0", "7:4", "3:0", "3:1", "2:0", "5:0", "5:1", "7:2", "5:1", "4:1", "7:2", "4:1", "6:0", "6:1", "6:1", "6:2", "6:2", "6:2", "6:3", "6:3"]
-vysledky_4 = ["12:0", "11:1", "11:0", "10:0", "10:0", "7:0", "8:0", "9:0", "7:0", "7:0", "8:0", "8:0", "7:0", "5:0", "6:0", "6:0", "8:1", "8:1", "9:1", "9:1"]
+vysledky_4 = ["12:0", "11:1", "10:0", "7:0", "8:0", "9:0", "7:0", "7:0", "8:0", "8:0", "7:0", "5:0", "6:0", "6:0", "5:0", "8:1", "8:1", "9:1", "9:1"]
 
 
 print("\n\n\nPRVNÍ TÝM:")
@@ -152,12 +152,10 @@ if vitez == "tym_1":
 			vysledek = random.choice(vysledky_1)
 		elif rozdil_ratingu <= 110:
 			vysledek = random.choice(vysledky_2)
-		elif rozdil_ratingu <= 165:
+		elif rozdil_ratingu <= 210:
 			vysledek = random.choice(vysledky_3)
-		elif rozdil_ratingu >= 165:
+		elif rozdil_ratingu >= 210:
 			vysledek = random.choice(vysledky_4)
-		
-		
 	if silnejsi_tym == 2:
 		vysledek = random.choice(vysledky_1)
 	
@@ -171,8 +169,10 @@ if vitez == "tym_2":
 			vysledek = random.choice(vysledky_1)
 		elif rozdil_ratingu <= 110:
 			vysledek = random.choice(vysledky_2)
-		else:
+		elif rozdil_ratingu <= 210:
 			vysledek = random.choice(vysledky_3)
+		elif rozdil_ratingu >= 210:
+			vysledek = random.choice(vysledky_4)
 	if silnejsi_tym == 1:
 		vysledek = random.choice(vysledky_1)
 
